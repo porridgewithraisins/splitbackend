@@ -25,7 +25,8 @@ export type LedgerEntry = {
     payerSplitType: SplitType;
     payeeSplits: Split[];
     payeeSplitType: SplitType;
-    settled: boolean;
+    settled?: boolean;
+    meta ?: any;
 };
 
 export type Owe = {

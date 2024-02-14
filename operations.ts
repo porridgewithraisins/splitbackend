@@ -11,6 +11,9 @@ export function addExpense(expense: T.LedgerEntry) {
 
 export function editExpense(updatedExpense: T.LedgerEntry) {
     updatedExpense.version++;
+    updatedExpense.meta = {
+        // something here maybe...
+    }
     // just append to storage, this way, can view edits and notes/comments for the same in some meta field
 }
 
@@ -34,5 +37,5 @@ export function settleUp(
     excludedPeople: T.PersonId[],
     excludedTransactions: T.TransactionId[]
 ) {
-    // filter ledger based on provided filters, and call simplify() on it.
+    // filter ledger based on provided filters, keep only last version of each entry, and call simplify() on it.
 }

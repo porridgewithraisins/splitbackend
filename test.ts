@@ -3,16 +3,16 @@ import { absolutify } from "./core/calculations";
 console.log(
     absolutify({
         id: "1",
-        payerSplitType: "shares",
+        payerSplitType: "unequally",
         payerSplits: [
-            { who: "sandy", howmuch: 1 },
-            { who: "vishal", howmuch: 4 },
+            { who: "sandy", howmuch: 100 },
+            { who: "vishal", howmuch: 400 },
         ],
         totalAmount: 500,
-        payeeSplitType: "shares",
+        payeeSplitType: "equally",
         payeeSplits: [
-            { who: "vishal", howmuch: 2 },
-            { who: "hemang", howmuch: 3 },
+            { who: "vishal", howmuch: 1 },
+            { who: "hemang", howmuch: 1 },
         ],
         settled: false,
         version: 0,
