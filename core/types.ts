@@ -14,7 +14,7 @@ export type SplitType = "shares" | "percentages" | "unequally" | "equally";
 
 export type Split = {
     who: PersonId;
-    howmuch: RelativeQuantity;
+    howmuch: RelativeQuantity | AbsoluteQuantity;
 };
 
 export type LedgerEntry = {
